@@ -16,7 +16,7 @@ import DarkOrLight from "./14ContextAPI/DarkOrLight";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <CommentList /> */}
+    <CommentList />
 
     {/* <Accomodate></Accomodate> */}
     {/* <Toggle> </Toggle> */}
@@ -27,10 +27,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Calculator /> */}
     {/* <SignupDialog></SignupDialog> */}
     {/*<ProfileCard />*/}
-    <DarkOrLight />
-
-
-
-
+    {/* <DarkOrLight /> */}
   </React.StrictMode>,
 );

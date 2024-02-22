@@ -2,12 +2,14 @@ import React from "react";
 // 컴포넌트 파일에 스타일드 컴포넌트로 css작성
 const styles = {
   wrapper: {
-    margin: 8,
+    margin: 10,
     padding: 8,
     display: "flex",
     flexDirection: "row ",
-    border: "1px solid grey",
+
     borderRadius: 16,
+    boxShadow: "0 0 5px 0 grey",
+    backgroundColor: "white",
   },
   imageContainer: {},
   image: {
@@ -21,7 +23,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
   },
-  mameText: {
+  nameText: {
     color: "lightblue",
     fontWeight: "bold",
     fontSize: 16,
