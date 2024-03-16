@@ -1,4 +1,3 @@
-import React from "react";
 // 컴포넌트 파일에 스타일드 컴포넌트로 css작성
 const styles = {
   wrapper: {

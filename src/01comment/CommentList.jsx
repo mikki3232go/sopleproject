@@ -1,5 +1,7 @@
 import React from "react";
 import Comment from "./Comment";
+import Comment1 from "./Comment1";
+
 const comments = [
   {
     name: "김민성",
@@ -18,14 +20,14 @@ function CommentList(props) {
   return (
     <div>
       {/* 컴포넌트 에 직접 속성값 주입하기  */}
-      <Comment
+      <Comment1
         name={"소마고"}
         comment={"안녕하세요 소마고 2학년 리액트 수강학생입니다."}
-      ></Comment>
+      ></Comment1>
       {/* 배열.map 함수로 컴포넌트에 속성값 주입하기  */}
       {comments.map(function (comment) {
         return (
-          <Comment name={comment.name} comment={comment.comment}></Comment>
+          <Comment1 name={comment.name} comment={comment.comment}></Comment1>
         );
       })}
     </div>
