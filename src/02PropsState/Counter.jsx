@@ -1,6 +1,7 @@
+{/* <Counter.jsx>  */}
 import { useState } from "react";
 export default function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);m
   return (
     <div>
       <h1>Counter</h1>
