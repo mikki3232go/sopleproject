@@ -3,7 +3,14 @@ function MapTest3() {
 const ages = [32, 33, 16, 40];
 const result = ages.filter((item)=>item >18);
 const result2 = ages.filter((item) =>item !== 32);
-   
+const msgList = [
+  "안녕하세요",
+  "2학년 학생입니다",
+  "리액트 수강생입니다."
+];
+
+let msgCopy=["dkfkgkgkg"];
+console.log([...msgList,...msgCopy])  ;
   function checkAdult(age) {
     return age >= 18;
   }
@@ -30,4 +37,6 @@ const result2 = ages.filter((item) =>item !== 32);
   }
 
   export default MapTest3;
+
  
+<input onChange={(e)=>{ console.log(e.target.value) }}/>

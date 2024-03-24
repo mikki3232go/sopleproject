@@ -9,7 +9,7 @@ function Hello(props) {
     <main>
       <h1>Hello {props.user} World!</h1>
       <h3>{props.count}번째 방문입니다.</h3>
-         
+         
     </main>
   );
 }

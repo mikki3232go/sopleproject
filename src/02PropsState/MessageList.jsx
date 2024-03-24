@@ -1,15 +1,17 @@
 import React from "react";
 import Message from "./Message";
+
+
 let foo = ["one", "two", "three"];
-    let [red, yellow, green] = foo;
-    console.log(red); // "one"
-    console.log(yellow); // "two"
-    console.log(green); // "three"
+    let [red, yellow, green] = foo;
+    console.log(red); // "one"
+    console.log(yellow); // "two"
+    console.log(green); // "three"
  
   let user = { name: "soma", age: 20 };
-  let { name, age } = user;
-  console.log(name); // "soma"
-  console.log(age); // 20
+  let { name, age } = user;
+  console.log(name); // "soma"
+  console.log(age); // 20
 
   ////////
 
