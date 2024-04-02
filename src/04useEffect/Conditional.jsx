@@ -3,7 +3,7 @@ import "./styles.css";
 
 export default function InputTest2() {
   //  const [변수명, set함수명] = useState(초기값);
-  const [count, setCount] = useState(0);
+ 
   const [text, setText] = useState("");
 
 const Modal= ()=>{
@@ -33,3 +33,4 @@ const Modal= ()=>{
   );
 }
 
+let 변수 = < 컴포넌트 />

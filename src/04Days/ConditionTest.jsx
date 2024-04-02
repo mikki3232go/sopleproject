@@ -52,7 +52,4 @@ export default function ConditionTest(){
             <Garage cars ={cars}/>
         </div>
         );
-    
-    
-
 }
