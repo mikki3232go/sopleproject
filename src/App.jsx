@@ -20,18 +20,21 @@ import MapTest1 from "./02PropsState/MapTest1";
 import MapTest3 from "./02PropsState/MapTestFilter3";
 import MessageList from "./02PropsState/MessageList";
 import MessageListIn from "./02PropsState/MessageListIn";
-import InputTest1 from "./04useEffect/InputTest2";
 import Conditional from "./04useEffect/Conditional";
 import ConditionR1 from "./04Days/ConditionR1"
 import ConditionR2 from "./04Days/ConditionR2"
 import ConditionTest from "./04Days/ConditionTest";
+import SpreadTest from "./05Days/SpreadTest";
+import InputTest2 from "./05Days/InputTest2";
 
 export default function App() {
   return (
     //<Input1 />
     // <CommentList />
   //  <MessageListIn/> 
-   <ConditionR1/>
+  // <ConditionR1/>
+  <InputTest2 />
+
   //  <MapTest3/>
     //   <Accomodate></Accomodate>
     //   <Toggle> </Toggle>
