@@ -48,3 +48,10 @@ export default function App() {
     //   <DarkOrLight />
   );
 }
+/* git add .
+git commit -m "메시지"
+git push origin
+
+git fetch 
+git merge
+git pull origin */
