@@ -18,22 +18,24 @@ import Input1 from "./02PropsState/Input1"
 import MapTest2 from "./02PropsState/MapTest2"
 import MapTest1 from "./02PropsState/MapTest1";
 import MapTest3 from "./02PropsState/MapTestFilter3";
-import MessageList from "./02PropsState/MessageList";
-import MessageListIn from "./02PropsState/MessageListIn";
+//import MessageList from "./02PropsState/MessageList";
+import MessageListCRUD from "./05Days/MessageListCRUD";
 import Conditional from "./04useEffect/Conditional";
 import ConditionR1 from "./04Days/ConditionR1"
 import ConditionR2 from "./04Days/ConditionR2"
 import ConditionTest from "./04Days/ConditionTest";
 import SpreadTest from "./05Days/SpreadTest";
-import InputTest2 from "./05Days/InputTest2";
+import MessageList from "./05Days/MessageList";
+import InputTest2 from "./05Days/InputTest2"
 
 export default function App() {
   return (
-    //<Input1 />
+    <InputTest2 />
     // <CommentList />
-  //  <MessageListIn/> 
+    // <MessageListCRUD/> 
   // <ConditionR1/>
-  <InputTest2 />
+ // <InputTest2 />
+//<SpreadTest /> 
 
   //  <MapTest3/>
     //   <Accomodate></Accomodate>
