@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import "./style.css";
 const Modal= (props)=>{
   const {name, nickname,email }= props;
@@ -8,8 +8,9 @@ const Modal= (props)=>{
       </div>
   );
 }
-export default function InputTest2() {
+export default function UseRefTest1() {
  //  const [변수명, set함수명] = useState(초기값);
+ const nameInput = useRef(); //ureRef로 객체요소로 정의
  const [inputs, setInputs] = useState({
    name: '',
    nickname: '',
@@ -18,13 +19,12 @@ export default function InputTest2() {
 const {name, nickname, email} = inputs;
 
  return (
-   <div className="App">
-     
-     <p>
-      <form>
+<div>
+ <form>
        <input
          name = "name" placeholder="이름을 입력"
          value={name}
+         ref = {nameInput}
          type="text"
          onChange={(e) => setInputs({
            ...inputs,
@@ -35,6 +35,7 @@ const {name, nickname, email} = inputs;
        <input
          name = "nickname" placeholder="닉네임을 입력"
          value={nickname}
+
          type="text"
          onChange={(e) => setInputs({
            ...inputs,
@@ -53,21 +54,20 @@ const {name, nickname, email} = inputs;
        />
        {console.log(inputs)}
        <br/>
-      <button type ="submit" action = "" onClick ={()=>alert("입력이 완료되었습니다.")
-      } >등록 </button>
-   <button type ="reset" action = "" onClick ={()=>setInputs({
+      <button onClick ={()=> alert(nameInput.current.value+"입력이 완료되었습니다.")
+       //ureRef 객체를 current로 참조
+       } >등록</button>
+   <button type ="reset" onClick ={()=>{
+    setInputs({
      name : '',
      nickname : '',
      email:'',
-   })} >초기화 </button>
-   </form>
-     </p>
-     <hr />
+   });
+   nameInput.current.focus()}}>초기화 </button>
+    </form>
    {/* {text?<Modal/>:null} */}
    {/* {text &&<Modal/>} */}
    {name && <Modal name ={ name} nickname = { nickname} email ={email}/>}
-   
-   </div>
- );
+   </div>);
+ 
 }
-

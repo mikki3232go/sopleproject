@@ -26,6 +26,7 @@ import ConditionR2 from "./04Days/ConditionR2"
 import ConditionTest from "./04Days/ConditionTest";
 import SpreadTest from "./05Days/SpreadTest";
 import InputTest2 from "./05Days/InputTest2";
+import UseRefTest1 from "./06Days/UseRefTest1";
 
 export default function App() {
   return (
@@ -33,8 +34,8 @@ export default function App() {
     // <CommentList />
   //  <MessageListIn/> 
   // <ConditionR1/>
-  <InputTest2 />
-
+  //<InputTest2 />
+  <UseRefTest1 />
   //  <MapTest3/>
     //   <Accomodate></Accomodate>
     //   <Toggle> </Toggle>
