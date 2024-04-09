@@ -27,10 +27,16 @@ import ConditionTest from "./04Days/ConditionTest";
 import SpreadTest from "./05Days/SpreadTest";
 import MessageList from "./05Days/MessageList";
 import InputTest2 from "./05Days/InputTest2"
+import UserAdd from "./06/UserAdd";
+import UserDelete from "./06/UserDelete";
+import UserModify from "./06/UserModify"
 
 export default function App() {
   return (
-    <InputTest2 />
+    
+   // <UserAdd />
+ 
+   <UserModify />
     // <CommentList />
     // <MessageListCRUD/> 
   // <ConditionR1/>

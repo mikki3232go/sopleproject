@@ -47,7 +47,7 @@ export default function SpreadTest(){
             } value = {user.email} /></li>
             {console.log(user)}
         <li><button type = "submit" action ="">확인 </button>
-        <button  onClick ={()=>setUser(
+<button  onClick ={()=>setUser(
             {...user,
             id : 0,
             name:'',

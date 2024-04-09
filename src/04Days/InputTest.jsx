@@ -10,7 +10,6 @@
 }
 export default function InputTest() {
   //  const [변수명, set함수명] = useState(초기값);
-  const [count, setCount] = useState(0);
   const [text, setText] = useState("");
 
   return (
