@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
-import "./styles.css";
-=======
 import "./style.css";
->>>>>>> refs/remotes/origin/main
+
 import { useState } from "react";
 
 //Message 컴포넌트 구현하기
@@ -22,3 +19,4 @@ function Message(props  ) {
   );
 }
 export default Message; 
+

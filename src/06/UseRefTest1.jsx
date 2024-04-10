@@ -9,7 +9,14 @@ const Modal= (props)=>{
   );
 }
 export default function UseRefTest1() {
+<<<<<<< HEAD:src/06Days/UseRefTest1.jsx
  //  const [변수명, set함수명] = useState(초기값);
+=======
+<<<<<<< HEAD
+=======
+ //  const [변수명, set함수명] = useState(초기값);
+>>>>>>> c2c50644cff3fa83441744552344720b33c97ddb
+>>>>>>> refs/remotes/origin/main:src/06/UseRefTest1.jsx
  const nameInput = useRef(); //ureRef로 객체요소로 정의
  const [inputs, setInputs] = useState({
    name: '',

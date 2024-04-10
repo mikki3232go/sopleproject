@@ -1,9 +1,5 @@
 import { useState } from "react";
 import "./style.css";
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
 const Modal= (props)=>{
   const {name, nickname,email }= props;
   return (
