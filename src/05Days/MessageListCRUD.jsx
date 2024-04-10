@@ -6,22 +6,33 @@ const msgs = [
 ];
 let targetId = 0;
 
-function MessageListIn( ) {
-  const [msgLists,setmsgLists]= useState(msgs);  //1. 입력하기
+export default function MessageListCRUD( ) {
+  const [msgLists,setmsgLists]= useState(msgs);  //1. 입력하기 참조형
   const [input, setInput] = useState("");
-  
+  function onInsert(){
+   
+    let copy = msgLists; //렌더링이 일어나지 않는다.
+     copy.push(input);
+     setmsgLists(copy);
+     console.log(msgLists); //배열은 값은 추가가 일어나고 있으나 렌더링은 되지 않는다. 이유는?
+  // setmsgLists([...msgLists,input]); 
+
+  }
   function onModify(){
-    let copy =[...msgLists]; //참조형이므로 copy = msgLists 하는 경우 state  변화없음(주소 동일)*** 중요
-    copy[targetId] = input;
-     
-    setmsgLists(copy);
-     
+    if (input){ //1.숙제
+      let copy =[...msgLists]; //참조형이므로 copy = msgLists 하는 경우 state  변화없음(주소 동일)*** 중요
+      copy[targetId] = input; 
+      setmsgLists(copy);
+      }
+      else { //숙제
+        alert("수정할 내용을 입력하세요.");
+      }    
   }
 
   //Message 컴포넌트 구현하기
     function Message(props) {  
       
-      const {msg, idx} = props;
+      const { msg, idx} = props;
       function onDelete(){
         setmsgLists(msgLists.filter((item,index) => index !== idx));
       }
@@ -31,11 +42,11 @@ function MessageListIn( ) {
           {msg}
           <div className = "control">
            
-            <span  onClick = {()=> {
-              setInput(msgLists[idx]);
-              targetId = idx;
-            }}>🖋</span>&nbsp;&nbsp;&nbsp;
-            
+            <span  onClick = {()=>{  //연필 누르면 수정될 데이터가 input창에 조회됨
+                setInput(msgLists[idx]);
+                targetId = idx;
+            } }>🖋</span>&nbsp;&nbsp;&nbsp;
+        
             <span onClick={onDelete}>🗑</span>
           </div> 
         </div>
@@ -63,12 +74,12 @@ function MessageListIn( ) {
   
         }}/>
        
-      <button onClick= {()=>{setmsgLists([...msgLists,input])}}>등록</button>
-      <button onClick= {onModify}>수정</button>
+      <button onClick= {onInsert}>등록</button>
+      <button onClick=  {onModify}>수정</button>
       <button onClick= {()=>{setInput("")}}>취소</button>
       </div>
     </div>
   );
 }
-export default MessageListIn;
+
 

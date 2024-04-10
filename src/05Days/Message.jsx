@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 import "./styles.css";
+=======
+import "./style.css";
+>>>>>>> refs/remotes/origin/main
 import { useState } from "react";
 
 //Message 컴포넌트 구현하기
 function Message(props  ) {  
   
-  const msg = props.msg;
+  const {msg} = props ; //props는 객체
   
   return (
     <div className="wrapper">

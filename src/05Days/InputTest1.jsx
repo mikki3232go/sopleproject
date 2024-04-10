@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function SpreadTest(){
+export default function InputTest1(){
     const user1= {
         id : 0,
         name : '',
@@ -16,17 +16,7 @@ export default function SpreadTest(){
  
     //user객체 복사하고 속성을 추가한 userAdd 객체 만들기
  
-    // userAdd객체 출력
    
-    // document.write(userAdd.id);
-    // document.write(userAdd.name);
-    // document.write(userAdd.email);
-    //배열에서 사용하기
-    const fruits = ['딸기', '바나나', '복숭아'];
-    const fruitsAdd = ['블루베리', ...fruits];
-    //fruitsAdd객체 출력
-    console.log(fruitsAdd);
-    // document.write('<br>' + fruitsAdd);
     return (
 
     <div>
@@ -47,7 +37,7 @@ export default function SpreadTest(){
             } value = {user.email} /></li>
             {console.log(user)}
         <li><button type = "submit" action ="">확인 </button>
-        <button  onClick ={()=>setUser(
+<button  onClick ={()=>setUser(
             {...user,
             id : 0,
             name:'',

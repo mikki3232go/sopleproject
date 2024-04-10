@@ -1,5 +1,9 @@
 import { useState } from "react";
 import "./style.css";
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
 const Modal= (props)=>{
   const {name, nickname,email }= props;
   return (
@@ -22,7 +26,7 @@ const {name, nickname, email} = inputs;
      
      <p>
       <form>
-       <input
+       이름 <input
          name = "name" placeholder="이름을 입력"
          value={name}
          type="text"
@@ -32,7 +36,7 @@ const {name, nickname, email} = inputs;
          })}
        />
        <br/>
-       <input
+       닉네임<input
          name = "nickname" placeholder="닉네임을 입력"
          value={nickname}
          type="text"
@@ -42,7 +46,7 @@ const {name, nickname, email} = inputs;
          })}
        />
        <br/>
-       <input
+       이메일<input
          name = "email" placeholder="이메일을 입력"
          value={email}
          type="email"
