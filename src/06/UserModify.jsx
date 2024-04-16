@@ -1,7 +1,7 @@
 import {useRef, useState } from "react";
 import "./style.css";
 
-const User = ({user, onRemove,onToggle,onModify }) => {//props로 객체를 받는 경우 {}로 받음
+const User = ({user, onRemove, onToggle, onModify }) => {//props로 객체를 받는 경우 {}로 받음
 
   const {id, name, email} = user; 
   console.log(id,name,email);
