@@ -45,11 +45,11 @@ const msgs = [
         {/* 4. 배열을 리스트로 출력  */}
         {
             msgList.map((msg,index)=> {return(
-            <div   >
+            <div>
               <div class ="wrapper">{msg}
               <div class = "control">
-              <button onClick = {()=>onRemove(index)}>삭제</button>   {/* 5. 삭제버튼 작성, 함수호출  */}
-              <button onClick = {()=>onModify(index)}>수정</button>   {/* 6. 수정버튼 작성, 함수호출  */}
+                <button onClick = {()=>onRemove(index)}>삭제</button>   {/* 5. 삭제버튼 작성, 함수호출  */}
+                <button onClick = {()=>onModify(index)}>수정</button>   {/* 6. 수정버튼 작성, 함수호출  */}
               </div>
               </div>
 

@@ -33,9 +33,7 @@ export default function MsgListCRUD( ) {
     function Message(props) {  
       
       const { msg, idx} = props;
-      function onDelete(){
-        setmsgLists(msgLists.filter((item,index) => index !== idx));
-      }
+    
      
       return (
         <div className="wrapper"  >

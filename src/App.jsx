@@ -6,7 +6,8 @@ import UserDelete from "./06/UserDelete";
 import UserModify from "./06/UserModify"
 import UseRefAdd from "./06/UseRefAdd";
 import MsgListLast from "./07/MsgListLast";
-
+import Accomodate from "./07Hooks/Accomodate"
+import UseEffect1 from "./07Hooks/useEffect1"
 
 export default function App() {
   return (
@@ -14,8 +15,8 @@ export default function App() {
    // <UserAdd />
  //<UserDelete />
  //  <UserModify />
- //
- <MsgListLast />
+ <UseEffect1 />
+ //<MsgListLast />
   )
    
 }
