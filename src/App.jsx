@@ -6,6 +6,7 @@ import UserDelete from "./06/UserDelete";
 import UserModify from "./06/UserModify"
 import UseRefAdd from "./06/UseRefAdd";
 import MsgListLast from "./07/MsgListLast";
+import MsgListLast2 from "./07/MsgListLast2"
 
 
 export default function App() {
@@ -15,7 +16,8 @@ export default function App() {
  //<UserDelete />
  //  <UserModify />
  //
- <MsgListLast />
+// <MsgListLast />
+ <MsgListLast2 />
   )
    
 }
