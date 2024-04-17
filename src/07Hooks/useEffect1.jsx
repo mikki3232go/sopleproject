@@ -1,12 +1,12 @@
 import React, { useState,useRef, useEffect } from "react";
 import "./style.css";
 
-const Info = () => {
+export default  function UseEffect1() {
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
   const [depname, setDepname] =useState("");
   const [modal, setModal] = useState(true) ;
- 
+  const [msg,setMsg] = useState("useEffect 실습입니다 ");
  
   // useEffect는 기본적으로 렌더링되고 난 직후마다 실행되며, 두 번째 파라미터 배열에 무엇을 넣는지에 따라 실행되는 조건이 달라짐  
 //   useEffect(() => {
@@ -46,6 +46,11 @@ useEffect(() => {
 // 뒷정리 함수가 호출될 때는 업데이트되기 직전의 값을 보여 줌
 
 // 언마운트될 때만 뒷정리 함수를 호출하고 싶다면 useEffect 함수의 두 번째 파라미터에 비어 있는 배열을 넣음
+// 4. 언마운트될 때 한번만 실행하고 싶을 때
+ //useEffect 이펙트함수를 맨 처음 렌더링될 때 한번만 실행 하려면 함수의 두 번째 파라미터로 빈 배열을 넣어줌
+
+
+
   const onChangeName = e => {
      
      setName(e.target.value);
@@ -54,6 +59,13 @@ useEffect(() => {
 const onChangeNickname = e => {
     setNickname(e.target.value);
   };
+const Modal =({msg})=>{
+  useEffect(() => {
+    return()=>{
+    alert("Modal 컴포넌트 언마운트" );
+     
+  }}, []);
+  return <div id = "modal">{msg} </div>};
 
   return (
     <div>
@@ -63,6 +75,7 @@ const onChangeNickname = e => {
         <input value={nickname} onChange={onChangeNickname} />
         <button onClick ={()=>setDepname(name)}>이름 출력</button>
       </div>
+
       <div>
         <div>
           <b>이름:</b> {name}
@@ -72,15 +85,16 @@ const onChangeNickname = e => {
         </div>
         {
             modal ?
-            <div id = "modal">useEffect 실습입니다. </div> : null
+           <Modal msg = {msg} /> : null
         }
-      </div>
-    </div>
+      
+        
+     </div>
+     </div>
   );
-};
+}
 
-
-export default Info;
+ 
  
 
 
