@@ -1,5 +1,7 @@
 import {useState,useRef} from "react";
 import "./style.css"
+import { MdEditNote } from "react-icons/md";
+
 const msgs = [
     "안녕하세요. 오늘의 일정입니다.", 
     "점심시간이 11시 30분으로 변경되었습니다.",
@@ -36,7 +38,7 @@ const msgs = [
     return (
         
     <div>
-      <h1 > 일정 관리 </h1>
+      <h1 > <MdEditNote />일정 관리 <MdEditNote /></h1>
       <div class = "container">
         <input type="text" name ="msg" value = {input} onChange ={(e)=>setInput(e.target.value)}/>
         <button onClick ={onCreate}>등록</button>
