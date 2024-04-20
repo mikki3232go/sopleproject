@@ -1,7 +1,7 @@
 import React, { useState,useRef, useEffect } from "react";
 import "./style.css";
 
-const Info = () => {
+export default function UseEffect1() {
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
   const [depname, setDepname] =useState("");
@@ -80,7 +80,7 @@ const onChangeNickname = e => {
 };
 
 
-export default Info;
+ 
  
 
 

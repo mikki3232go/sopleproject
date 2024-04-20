@@ -9,7 +9,7 @@ import MsgListLast from "./07/MsgListLast";
 import MsgListLast2 from "./07/MsgListLast2"
 
 import Accomodate from "./07Hooks/Accomodate"
-import UseEffect1 from "./07Hooks/useEffect1"
+import UseEffect1 from "./07Hooks/UseEffect1"
 
 export default function App() {
   return (
