@@ -1,39 +1,25 @@
 import React, { useEffect, useState } from "react";
- 
 
-const MAX_CAPACITY = 10;
-
- const  useCounter = (init) => {
-//  // const [count, setCount] = useState(init);
-
-//   const incr  = () => setCount((count) => count + 1);
-//   const decr  = () => setCount((count) => 
-//     (count - 1));
-//   return [count, incr, decr ];
-}
-
-
-function Accomodate(props) {
+export default function useEffect2() {
   const [isFull, setIsFull] = useState(false);
  // const [count, incr, decr] = useCounter(0);
  const [count, setCount] = useState(0);
-  useEffect(() => { //리렌더링될대마다 실행
+  useEffect(() => { //컴포넌트 마운트 될때 
     console.log("=========================");
     console.log("컴포넌트 마운티드");
-    
-    
+     
   },[]);
   useEffect(() => { //리렌더링될대마다 실행
     console.log("=========================");
-    console.log("useEffect() is called.");
+    console.log("useEffect가 실행됨");
     console.log(`is Full : ${isFull}`);
   });
 
 
   useEffect(() => {  //count가 변경될때 실행
-    setIsFull(count >= MAX_CAPACITY);
+    setIsFull(count >= 10);
     console.log(`현재 인원수 : ${count}`);
-    return ()=>{console.log("클린업함수");
+    return ()=>{console.log(`변경전 인원수 : ${count}`);
     console.log("=========================");
   }
   }, [count]);
@@ -49,4 +35,4 @@ function Accomodate(props) {
     </div>
   );
 }
-export default Accomodate;
+

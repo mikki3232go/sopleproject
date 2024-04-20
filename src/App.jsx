@@ -6,10 +6,11 @@ import UserDelete from "./06/UserDelete";
 import UserModify from "./06/UserModify"
 import UseRefAdd from "./06/UseRefAdd";
 import MsgListLast from "./07/MsgListLast";
+import UseEffect2 from "./07Hooks/UseEffect2"
 import MsgListLast2 from "./07/MsgListLast2"
 
 import Accomodate from "./07Hooks/Accomodate"
-import UseEffect1 from "./07Hooks/UseEffect1"
+import UseEffect1 from "./07Hooks/useEffect1"
 
 export default function App() {
   return (
