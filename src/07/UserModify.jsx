@@ -81,9 +81,7 @@ export default function UserModify(){
         [name]: value});
    
     };
-
-
-   const onCreate =()=>{ 
+  const onCreate =()=>{ 
       const user1 = {
         id : nextId.current,
         name,
@@ -156,4 +154,4 @@ export default function UserModify(){
         );
        
   }
- 
+ /////////////////////

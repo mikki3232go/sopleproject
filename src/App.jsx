@@ -7,10 +7,7 @@ import UserModify from "./06/UserModify"
 import UseRefAdd from "./06/UseRefAdd";
 import MsgListLast from "./07/MsgListLast";
 import UseEffect2 from "./07Hooks/UseEffect2"
-import MsgListLast2 from "./07/MsgListLast2"
-
-import Accomodate from "./07Hooks/Accomodate"
-import UseEffect1 from "./07Hooks/useEffect1"
+import UseEffect1 from "./07Hooks/UseEffect1"
 
 export default function App() {
   return (
@@ -18,9 +15,6 @@ export default function App() {
    // <UserAdd />
  //<UserDelete />
  //  <UserModify />
- //
-// <MsgListLast />
- //<MsgListLast2 />
  <UseEffect1 />
  //<MsgListLast />
   )
