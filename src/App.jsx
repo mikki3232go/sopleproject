@@ -24,14 +24,8 @@ export default function App() {
     //
     // <MsgListLast />
     //<MsgListLast2 />
-    // <ReactFacts />
+    <UseEffect1 />
     //<MsgListLast />
-    // <CommentList />
-    <div>
-      1<PostList />
-      2<PostList2 />
-      3<PostList31 />
-    </div>
   );
 }
 /* git add .
