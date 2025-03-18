@@ -1,24 +1,20 @@
 import React from "react";
 import Message from "./Message";
-
-
-let foo = ["one", "two", "three"];
-    let [red, yellow, green] = foo;
-    console.log(red); // "one"
-    console.log(yellow); // "two"
-    console.log(green); // "three"
- 
-  let user = { name: "soma", age: 20 };
-  let { name, age } = user;
-  console.log(name); // "soma"
-  console.log(age); // 20
-
-  ////////
-
-
-const msgLists = ["안녕하세요. 오늘의 일정입니다.", "점심시간이 11시 30분으로 변경되었습니다.","이제 곧 회의가 시작됩니다."
-   
-];
+const msgLists = ["안녕하세요. 오늘의 일정입니다.", "점심시간이 11시 30분으로 변경되었습니다.","이제 곧 회의가 시작됩니다."];
+function Message(props) {  
+  
+  const msg = props.msg;
+  
+  return (
+    <div className="wrapper">
+      {msg}
+      <div className = "control">
+        <span onClick={()=>{ }}>🖋</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span onClick={()=>{}}>🗑</span>
+      </div> 
+    </div>
+  );
+}
 function MessageList( ) {
   return (
     <div>
