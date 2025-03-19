@@ -41,7 +41,8 @@ export const posts = [
             <div className="comment-text">{comment}</div>
             <span onClick = {onLike}>{' 💕💕  '}{like}</span> 
             <div className="comment-time">{time}</div>  
-            <div><button onClick ={onDelete}>삭제</button></div>                  
+            <button className="delete-button " onClick ={onDelete}>삭제</button>
+            
         </div>
     </div>
     );
