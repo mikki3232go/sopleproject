@@ -83,7 +83,13 @@ const PostList3 = () => {
           avatar={comment.avatar}
           likes={comment.likes}
           onDelete={() => handleDelete(index)} // 삭제 함수 전달
-          onLike={() => handleLike(index)} // 좋아요 함수 전달
+          onLike ={()=> {
+                const newComments =[...comments];
+                newComments[index].like +=1;
+                setLists(newComments);
+                console.log(newComments[index]);
+                
+            }} // 좋아요 함수 전달
         />
       ))}
     </div>
