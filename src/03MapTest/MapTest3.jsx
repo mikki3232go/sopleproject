@@ -36,31 +36,47 @@ export const people = [
     imageId: 'lrWQx8l',
   },
 ];
-
-// getImageUrl 함수 - person 객체를 받아 이미지 URL 생성
-export function getImageUrl(person) {
+function getImageUrl(person) {
   return 'https://i.imgur.com/' + person.imageId + 's.jpg';
 }
-
-// List 컴포넌트 - 과학자 목록을 출력
 export default function MapTest3() {
-  const chemists = people.filter((item) => item.profession == '화학자'); //1. 호
-  const etc = people.filter((item) => item.profession !== '화학자');
-  const listItems = people.map((person) => (
-    <li key={person.id}>
-      <img src={getImageUrl(person)} alt={person.name} />
-      <div className="card">
-        <br />
-        <b>{person.name}:</b>
-        {' ' + person.profession + ' '}
-        known for {person.accomplishment}
-      </div>
-    </li>
-  ));
+  const chemists = people.filter((person) => person.profession == '화학자');
+  const etc = people.filter((person) => person.profession !== '화학자');
   return (
     <div>
       <h1>Scientists</h1>
-      <ul>{listItems}</ul>
+      <h2>화학자들</h2>
+      <ul>
+        {chemists.map((person) => {
+          return (
+            <li key={person.id}>
+              <img src={getImageUrl(person)} alt={person.name} />
+              <div className="card">
+                <br />
+                <b>{person.name} </b>
+                {' ' + person.profession + '  '}known for{' '}
+                {person.accomplishment}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+      <h2>기타</h2>
+      <ul>
+        {etc.map((person) => {
+          return (
+            <li key={person.id}>
+              <img src={getImageUrl(person)} alt={person.name} />
+              <div className="card">
+                <br />
+                <b>{person.name} </b>
+                {' ' + person.profession + '  '}known for{' '}
+                {person.accomplishment}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
