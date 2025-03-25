@@ -35,7 +35,9 @@ export default function PostList2() {
           comment={comment.comment}
           time={comment.time}
           avatar={comment.avatar}
-          onDelete={() => alert('렌더링시 출력')}
+           onDelete={
+            () => setComments((comments) => comments.filter((item, i) => i !== index))
+          }
         />
       ))}
     </div>
