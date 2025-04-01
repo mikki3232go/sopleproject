@@ -14,7 +14,13 @@ const handleChange = (e) => {   //3. 반복부분 함수로 구현
     console.log(e.target)
     const name = e.target.name;
     const value = e.target.value;  //4. 구조분해 할당할것
+    /* setUser({
+        ...user,
+        profile : {
+            ...user.profile,
+            [name]: value,
 
+        }})도 가능 */
     setUser((prev)=>({
         ...prev,
         profile :{
