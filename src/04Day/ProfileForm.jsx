@@ -1,82 +1,73 @@
 import React, { useState } from "react";
 
-function ProfileForm() {
+export default function ProfileForm() {
+  // 중첩된 객체 구조를 갖는 상태 정의
   const [user, setUser] = useState({
     profile: {
       name: "",
       email: "",
     },
   });
+ 
+const handleChange = (e) => {   //3. 반복부분 함수로 구현
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+    console.log(e.target)
+    const name = e.target.name;
+    const value = e.target.value;  //4. 구조분해 할당할것
 
-    setUser((currentUser) => ({
-      ...currentUser,
-      profile: {
-        ...currentUser.profile,
-        [name]: value,
-      },
-    }));
-  };
+    setUser((prev)=>({
+        ...prev,
+        profile :{
+            ...prev.profile,
+            [name]: value,
 
+        }}))
+}
+  // 간단한 form UI 구성
   return (
-    <div
-      style={{
-        padding: "30px",
-        maxWidth: "400px",
-        margin: "40px auto",
-        border: "1px solid #ccc",
-        borderRadius: "10px",
-        boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-        fontFamily: "sans-serif",
-      }}
-    >
-      <h2 style={{ textAlign: "center", marginBottom: "20px" }}>프로필 수정</h2>
+    <div style={{ padding: "20px" }}>
+      <h2>프로필 수정</h2>
       <form>
-        <div style={{ marginBottom: "15px" }}>
-          <label style={{ display: "block", marginBottom: "6px", fontWeight: "bold" }}>이름</label>
+        <div style={{ marginBottom: "10px" }}>
+          <label>이름: </label>
           <input
             type="text"
             name="name"
             value={user.profile.name}
-            onChange={handleChange}
-            style={{
-              width: "100%",
-              padding: "8px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
+            onChange={(e)=>{                    //1. 이벤트 발생시 타겟 저장
+                console.log(e.target.value)
+                const name = e.target.name;
+                const value = e.target.value;
+                setUser((prev)=>({              //2. 스프레드연산자로 중복객체 복사
+                    ...prev,
+                    profile :{
+                        ...prev.profile,
+                        [name]: value,
+
+                    }}))
             }}
+          
           />
         </div>
-        <div style={{ marginBottom: "15px" }}>
-          <label style={{ display: "block", marginBottom: "6px", fontWeight: "bold" }}>이메일</label>
+        <div>
+          <label>이메일: </label>
           <input
             type="email"
             name="email"
             value={user.profile.email}
-            onChange={handleChange}
-            style={{
-              width: "100%",
-              padding: "8px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
+            onChange={(e)=>{handleChange(e)     //5.함수 사용
+                
             }}
           />
         </div>
       </form>
 
-      <hr style={{ margin: "20px 0" }} />
+      <hr />
 
-      <h3 style={{ marginBottom: "10px" }}>입력 결과</h3>
-      <p>
-        <strong>이름:</strong> {user.profile.name || "(미입력)"}
-      </p>
-      <p>
-        <strong>이메일:</strong> {user.profile.email || "(미입력)"}
-      </p>
+      {/* 변경된 결과를 바로 확인할 수 있도록 출력 */}
+      <h3>입력 결과</h3>
+      <p>이름: {user.profile.name}</p>
+      <p>이메일: {user.profile.email}</p>
     </div>
   );
 }
-
-export default ProfileForm;
