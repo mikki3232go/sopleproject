@@ -72,7 +72,10 @@ const onChangeNickname = e => {
         </div>
         {
             modal ?
-            <div id = "modal">useEffect 실습입니다. </div> : null
+            <div id = "modal" style ={{height: "20%",
+      width : "70%",
+      background:"lightcyan",
+      padding: "20px"}}>useEffect 실습입니다. </div> : null
         }
       </div>
     </div>
