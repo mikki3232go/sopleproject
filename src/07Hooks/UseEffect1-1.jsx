@@ -66,7 +66,17 @@ export default function UseEffect1() {
         <div>
           <b>닉네임:</b> {inputs.name}
         </div>
+<<<<<<< HEAD
         {modal ? <div id="modal">useEffect 실습입니다. </div> : null}
+=======
+        {
+            modal ?
+            <div id = "modal" style ={{height: "20%",
+      width : "70%",
+      background:"lightcyan",
+      padding: "20px"}}>useEffect 실습입니다. </div> : null
+        }
+>>>>>>> refs/remotes/origin/main
       </div>
     </div>
   );
