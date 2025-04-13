@@ -79,7 +79,7 @@
 }
 
 .delete-button:hover {
-  background-color: gray;
+  background-color: gray  ;
 }
 
 /* 좋아요 버튼과 좋아요 수 */

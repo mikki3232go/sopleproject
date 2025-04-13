@@ -51,9 +51,9 @@ export default function PostList31() {
             comment={comment.comment}
             time={comment.time}
             avatar={comment.avatar}
-            likes={comment.likes}
-            onDelete={() => handleDelete(index)}
-            onLike={() => handleLike(index)}
+            likes={comment.likes}  //추가하세요
+            onDelete={() => handleDelete(index)}//추가하세요
+            onLike={() => handleLike(index)}//추가하세요
           />
         )
       )}

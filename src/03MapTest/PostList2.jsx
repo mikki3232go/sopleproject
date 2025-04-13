@@ -35,9 +35,12 @@ export default function PostList2() {
           comment={comment.comment}
           time={comment.time}
           avatar={comment.avatar}
-          onDelete={() => alert('렌더링시 출력')}
+          onDelete={() => handleDelete(index)}
         />
       ))}
     </div>
   );
 }
+//자식컴포넌트로 속성함수 주입시
+// onDelete={() => handleDelete(index)}: 클릭했을 때 handleDelete(index)를 실행하도록 함수를 전달.
+// onDelete={handleDelete(index)}: 컴포넌트가 렌더링될 때 즉시 실행됨, 클릭 이벤트와 관계없이 실행.

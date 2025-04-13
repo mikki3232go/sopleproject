@@ -15,17 +15,14 @@ import PostList31 from './03MapTest/PostList3-1.jsx';
 import PostList3 from './03MapTest/PostList3.jsx';
 import PostList2 from './03MapTest/PostList2.jsx';
 import PostList from './03MapTest/postList.jsx';
+import MapTest3 from './03MapTest/MapTest3.jsx';
+import MapTest4 from './03MapTest/MapTest4.jsx';
+import CallbackTest from './15AsyncTest/CallbackTest.jsx';
 export default function App() {
   return (
-    // <UseRefAdd />
-    // <UserAdd />
-    //<UserDelete />
-    //  <UserModify />
-    //
-    // <MsgListLast />
-    //<MsgListLast2 />
-    <UseEffect1 />
-    //<MsgListLast />
+    <div>
+      <CallbackTest />
+    </div>
   );
 }
 /* git add .
