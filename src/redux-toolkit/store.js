@@ -4,7 +4,7 @@
   cd redux-toolkit-counter
   npm install @reduxjs/toolkit react-redux */
 
-
+https://replit.com/@teacher013/redux-toolkit#src/index.jsx
 //store.js
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 //slice는 state를 저장하는 역할을 한다.
